@@ -20,16 +20,19 @@ cd Mallocing
 ```
 
 Then compile the desired file using the necessary flags, like this (example for custom_mallocs.c):
+
 ```bash
 g++ -shared -fPIC -o libalgo.so algo.c new.cpp  -ldl -lmemkind
 ```
+
 this command compiles the algo.c file, which includes the custom implementation for the C allocation and deallocation functions, and the new.cpp 
 file, which includes the respective CPP functions, into a shared object called spmalloc.so.
-The flags can be analyzed as such:
+
+The flags used:
 - **shared**:  This tells the compiler to create a shared library (also called a dynamic library).
 - **fPIC**:  It generates code that can be loaded at any memory address without requiring modification.
 - **lmemkind**:  Links against the memkind library (necessary for the memkind funcions).
-```
+
 
 npm install
 
@@ -37,16 +40,16 @@ npm install
 ## Usage
 Run the target executable (e.g test) using LD_PRELOAD with the shared library:
 ```bash
-
+LD_PRELOAD=/path/to/library/spmalloc.so /path/to/executable/test
 ```
 
-Here's how the app looks when running:
+Here's how the log file looks :
 ![Screenshot](screenshot.png)
 
 ## Features
 - 🚀 Fast and efficient
 - 🛠️ Easy to use
-- 🎨 Customizable themes
+- 🎨 Customizable 
 
 ## Contributing
 Contributions are welcome! Please open an issue first to discuss what you'd like to change.
