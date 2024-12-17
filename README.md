@@ -14,6 +14,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+```
 
 npm install
 
@@ -22,7 +23,7 @@ npm install
 Run the project:
 ```bash
 npm start
-
+```
 
 Here's how the app looks when running:
 ![Screenshot](screenshot.png)
