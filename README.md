@@ -26,7 +26,7 @@ g++ -shared -fPIC -o libalgo.so algo.c new.cpp  -ldl -lmemkind
 ```
 
 this command compiles the algo.c file, which includes the custom implementation for the C allocation and deallocation functions, and the new.cpp 
-file, which includes the respective CPP functions, into a shared object called spmalloc.so.
+file, which includes the respective C++ functions, into a shared object called spmalloc.so.
 
 The flags used:
 - **shared**:  This tells the compiler to create a shared library (also called a dynamic library).
@@ -34,14 +34,15 @@ The flags used:
 - **lmemkind**:  Links against the memkind library (necessary for the memkind funcions).
 
 
-npm install
-
 
 ## Usage
 Run the target executable (e.g test) using LD_PRELOAD with the shared library:
 ```bash
 LD_PRELOAD=/path/to/library/spmalloc.so /path/to/executable/test
 ```
+for the chunks.c file which performs monitoring, a log file is produced.
+This file displays the allocated bytes and active allocated objects over time 
+for the execution of the target application.
 
 Here's how the log file looks :
 ![Screenshot](screenshot.png)
@@ -49,7 +50,7 @@ Here's how the log file looks :
 ## Features
 - 🚀 Fast and efficient
 - 🛠️ Easy to use
-- 🎨 Customizable 
+- ⚙️ Customizable and scalable
 
 ## Contributing
 Contributions are welcome! Please open an issue first to discuss what you'd like to change.
@@ -61,4 +62,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 - [Some Useful Library](https://example.com)
 - Thanks to [@person](https://github.com/person) for their support.
+- Memkind API: https://pmem.io/memkind/manpages/memkind.3/
 
