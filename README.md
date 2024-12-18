@@ -16,14 +16,10 @@ executable using LD_PRELOAD.
 In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
 
 File descriptions:
-- **custom_malloc.c** :
-
-  This file is used to perform allocations either on DRAM or Optane. It includes the custom functions that are used to override the original
+- **custom_malloc.c** : This file is used to perform allocations either on DRAM or Optane. It includes the custom functions that are used to override the original
   glibc implementations. If the *dram* variable is set to 1, all allocations will be handled by DRAM, and if *dram=0* all allocations will be handled by optane.
 
-- **random.c** :
-
-  This file is used to perform allocations randomly. Each allocation is handled by either DRAM or Optane randomly.
+- **random.c** : This file is used to perform allocations randomly. Each allocation is handled by either DRAM or Optane randomly.
 
 - **round-robin.c** : This file is used to perform allocations on a round-robin way. The allocation data are placed in round-robin way
 on each memory.
