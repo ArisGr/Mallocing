@@ -13,11 +13,28 @@ executable using LD_PRELOAD.
 - [License](#license)
 
 ## File descriptions
-In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous systems.
+In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
+File descriptions:
+- **custom_malloc.c** : This file is used to perform allocations either on DRAM or Optane. If the *dram* variable is set to 1, all
+allocations will be handled by DRAM, and if *dram=0* all allocations will be handled by optane.
+
+- **random.c** : This file is used to perform allocations randomly. Each allocation is handled by either DRAM or Optane randomly.
+
+- **round-robin.c** : This file is used to perform allocations on a round-robin way. The allocation data are placed in round-robin way
+on each memory
+
+- **chunks.c** : This file is used to perform allocations on DRAM and also monitor the allocation patterns during the execution of the
+  target application. A background thread is used, which logs information about the allocated bytes and active allocated objects over time.
+
+- **new.cpp** : This file includes the new/delete functions from C++ which are simply redirected to the custom functions of the .c file.
+
 ## Installation
 Clone the repository:
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
+```
+Get inside the directory:
+```bash
 cd Mallocing
 ```
 
@@ -42,7 +59,7 @@ Run the target executable (e.g test) using LD_PRELOAD with the shared library:
 ```bash
 LD_PRELOAD=/path/to/library/spmalloc.so /path/to/executable/test
 ```
-for the chunks.c file which performs monitoring, a log file is produced.
+For the chunks.c file which performs monitoring, a log file is produced.
 This file displays the allocated bytes and active allocated objects over time 
 for the execution of the target application.
 
@@ -55,14 +72,11 @@ Here's how the log file looks :
 - ⚙️ Customizable and scalable
 
 ## Contributing
-Contributions are welcome! Please open an issue first to discuss what you'd like to change.
+Contributions are welcome! Feel free to expand and experiment with the library in whatever way.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
-## Acknowledgments
-- [Some Useful Library](https://example.com)
-- Thanks to [@person](https://github.com/person) for their support.
+## Useful Sites
 - Memkind API: https://pmem.io/memkind/manpages/memkind.3/
 
