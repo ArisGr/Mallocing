@@ -1,7 +1,7 @@
 # Mallocing
 
 Mallocing is an open-source, scalable library to intercept function calls of malloc, calloc, realloc, free in C and new,delete in C++
-to place allocation objects on heterogeneous memory systems. It is replaces the original functions of glibc with custom ones by using
+to place allocation objects on heterogeneous memory systems. It replaces the original functions of glibc with custom ones by using
 the respective functions of the MEMKIND API. The library is compiled into shared object (.so file) and then preloaded to the target
 executable using LD_PRELOAD.
 
@@ -12,6 +12,8 @@ executable using LD_PRELOAD.
 - [Contributing](#contributing)
 - [License](#license)
 
+## File descriptions
+In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous systems.
 ## Installation
 Clone the repository:
 ```bash
