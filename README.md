@@ -14,6 +14,7 @@ executable using LD_PRELOAD.
 
 ## File descriptions
 In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
+
 File descriptions:
 - **custom_malloc.c** : This file is used to perform allocations either on DRAM or Optane. If the *dram* variable is set to 1, all
 allocations will be handled by DRAM, and if *dram=0* all allocations will be handled by optane.
