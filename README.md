@@ -1,8 +1,8 @@
 # Mallocing
 
-Mallocing is an open-source, scalable library to intercept function calls of malloc, calloc, realloc, free in C and new,delete in C++
+Mallocing is an open-source, scalable library to intercept function calls of *malloc, calloc, realloc, free* in C and *new,delete* in C++
 to place allocation objects on heterogeneous memory systems. It replaces the original functions of glibc with custom ones by using
-the respective functions of the MEMKIND API. The library is compiled into shared object (.so file) and then preloaded to the target
+the respective functions of the MEMKIND API. The library is compiled into a shared object (.so file) and then preloaded to the target
 executable using LD_PRELOAD.
 
 
@@ -16,13 +16,13 @@ executable using LD_PRELOAD.
 In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
 
 File descriptions:
-- **custom_malloc.c** : This file is used to perform allocations either on DRAM or Optane. If the *dram* variable is set to 1, all
-allocations will be handled by DRAM, and if *dram=0* all allocations will be handled by optane.
+- **custom_malloc.c** : This file is used to perform allocations either on DRAM or Optane. It includes the custom functions that are used to override the original
+  glibc implementations. If the *dram* variable is set to 1, all allocations will be handled by DRAM, and if *dram=0* all allocations will be handled by optane.
 
 - **random.c** : This file is used to perform allocations randomly. Each allocation is handled by either DRAM or Optane randomly.
 
 - **round-robin.c** : This file is used to perform allocations on a round-robin way. The allocation data are placed in round-robin way
-on each memory
+on each memory.
 
 - **chunks.c** : This file is used to perform allocations on DRAM and also monitor the allocation patterns during the execution of the
   target application. A background thread is used, which logs information about the allocated bytes and active allocated objects over time.
@@ -39,7 +39,7 @@ Get inside the directory:
 cd Mallocing
 ```
 
-Then compile the desired file using the necessary flags, like this (example for custom_mallocs.c):
+Then compile the desired file using the necessary flags, like this (example for algo.c):
 
 ```bash
 g++ -shared -fPIC -o libalgo.so algo.c new.cpp  -ldl -lmemkind
@@ -60,7 +60,7 @@ Run the target executable (e.g test) using LD_PRELOAD with the shared library:
 ```bash
 LD_PRELOAD=/path/to/library/spmalloc.so /path/to/executable/test
 ```
-For the chunks.c file which performs monitoring, a log file is produced.
+If the library used was the one compiled from the the chunks.c file, which performs monitoring, a log file is produced.
 This file displays the allocated bytes and active allocated objects over time 
 for the execution of the target application.
 
