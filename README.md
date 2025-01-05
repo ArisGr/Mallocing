@@ -66,7 +66,7 @@ for the execution of the target application.
 
 Here's how the log file looks :
 
-![Screenshot_2](https://github.com/user-attachments/assets/66382849-5e50-463e-a619-d6613bb973be)
+![Screenshot_3](https://github.com/user-attachments/assets/f55597e6-f2ff-414d-b3ed-032b2ef634b8)
 
 ## Features
 - 🚀 Fast and efficient
