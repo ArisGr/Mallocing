@@ -65,7 +65,8 @@ This file displays the allocated bytes and active allocated objects over time
 for the execution of the target application.
 
 Here's how the log file looks :
-![Screenshot](![Screenshot_2](https://github.com/user-attachments/assets/66382849-5e50-463e-a619-d6613bb973be))
+![Screenshot_2](https://github.com/user-attachments/assets/66382849-5e50-463e-a619-d6613bb973be)
+![Screenshot]()
 
 ## Features
 - 🚀 Fast and efficient
