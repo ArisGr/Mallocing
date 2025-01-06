@@ -68,7 +68,7 @@ Here's how the log file looks :
 
 ![Screenshot_3](https://github.com/user-attachments/assets/f55597e6-f2ff-414d-b3ed-032b2ef634b8)
 
-The active objects value is the number of active allocation objects from the beggining of the execution until the current time stamp, and
+The active objects value is the number of active allocation objects from the beginning of the execution until the current time stamp, and
 the allocated bytes value is the number of allocated bytes in the current x second time stamp. In the example above x=0.25s, but this value is user defined and can be changed to fit the users preference.
 
 ## Features
