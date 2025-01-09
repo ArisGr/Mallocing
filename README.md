@@ -2,8 +2,10 @@
 
 Mallocing is an open-source, scalable library to intercept function calls of *malloc, calloc, realloc, free* in C and *new,delete* in C++
 to place allocation objects on heterogeneous memory systems. It replaces the original functions of glibc with custom ones by using
-the respective functions of the MEMKIND API. The library is compiled into a shared object (.so file) and then preloaded to the target
-executable using LD_PRELOAD.
+the respective functions of the MEMKIND API. 
+The library is compiled into a shared object (.so file) and then preloaded to the target executable using LD_PRELOAD.
+The library is further extended to perform monitoring of the allocation patterns of the
+target executable, by monitoring the size and the number of active allocated objects.
 
 
 ## Table of Contents
@@ -27,7 +29,7 @@ on each memory type.
 - **monitor.c** : This file is used to perform allocations on DRAM and also monitor the allocation patterns during the execution of the
   target application. A background thread is used, which logs information about the allocated bytes and active allocated objects over time.
 
-- **functions.cpp** : This file includes the new/delete functions from C++ which are simply redirected to the custom functions of the .c file.
+- **functions.cpp** : This file includes the new/delete functions from C++, which are simply redirected to the custom functions of the .c file (e.g. custom_allocator.c).
 
 ## Installation
 Clone the repository:
