@@ -62,7 +62,7 @@ Run the target executable (e.g test) using LD_PRELOAD with the shared library:
 ```bash
 LD_PRELOAD=/path/to/library/spmalloc.so /path/to/executable/test
 ```
-If the library used was the one compiled from the the chunks.c file, which performs monitoring, a log file is produced.
+If the library used was the one compiled from the the monitor.c file, which performs monitoring, a log file is produced.
 This file displays the allocated bytes and active allocated objects over time 
 for the execution of the target application.
 
