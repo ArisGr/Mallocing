@@ -6,7 +6,7 @@ the respective functions of the MEMKIND API.
 The library is compiled into a shared object (.so file) and then preloaded to the target executable using LD_PRELOAD.
 The library is further extended to perform monitoring of the allocation patterns of the
 target executable, by monitoring the size and the number of active allocated objects. Optane is used in our case, but you can adapt the functionality
-to your own memory type.
+to your own memory type supported by the Memkind API.
 
 
 ## Table of Contents
