@@ -44,11 +44,11 @@ cd Mallocing
 Then compile the desired file using the necessary flags, like this (example for algo.c):
 
 ```bash
-g++ -shared -fPIC -o spmalloc.so custom_allocator.c functions.cpp -lmemkind
+g++ -shared -fPIC -o mallocing.so custom_allocator.c functions.cpp -lmemkind
 ```
 
 this command compiles the custom_allocator.c file, which includes the custom implementation for the C allocation and deallocation functions, and the functions.cpp 
-file, which includes the respective C++ functions, into a shared object called spmalloc.so.
+file, which includes the respective C++ functions, into a shared object called mallocing.so.
 
 The flags used:
 - **shared**:  This tells the compiler to create a shared library (also called a dynamic library).
@@ -60,7 +60,7 @@ The flags used:
 ## Usage
 Run the target executable (e.g test) using LD_PRELOAD with the shared library:
 ```bash
-LD_PRELOAD=/path/to/library/spmalloc.so /path/to/executable/test
+LD_PRELOAD=/path/to/library/mallocing.so /path/to/executable/test
 ```
 If the library used was the one compiled from the the monitor.c file, which performs monitoring, a log file is produced.
 This file displays the allocated bytes and active allocated objects over time 
