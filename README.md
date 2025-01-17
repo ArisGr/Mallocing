@@ -16,7 +16,7 @@ target executable, by monitoring the size and the number of active allocated obj
 - [License](#license)
 
 ## Descriptions
-In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
+In this repo, you will find a number of files, each one with each own functionality for data placement on heterogeneous memory systems.
 
 File descriptions:
 - **custom_allocator.c** : This file is used to perform allocations either on DRAM or Optane. It includes the custom functions that are used to override the original
