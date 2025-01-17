@@ -43,7 +43,7 @@ Change directory:
 cd Mallocing
 ```
 
-Then compile the desired file using the necessary flags, like this (example for algo.c):
+Then compile the desired file using the necessary flags, like this (example for custom_allocator.c):
 
 ```bash
 g++ -shared -fPIC -o mallocing.so custom_allocator.c functions.cpp -lmemkind
