@@ -20,7 +20,7 @@ to your own memory type supported by the Memkind API.
 In this repo, you will find a number of files, each one with each own functionality for data placement on heterogeneous memory systems.
 
 File descriptions:
-- **custom_allocator.c** : This file is used to perform allocations either on DRAM or Optane. It includes the custom functions that are used to override the original
+- **custom_allocator.c** : This file is used to perform allocations either on DRAM or Optane exclusively. It includes the custom functions that are used to override the original
   glibc implementations. If the *dram* variable is set to 1, all allocations will be handled by DRAM, and if *dram=0* all allocations will be handled by optane.
 
 - **random.c** : This file is used to perform allocations randomly. Each allocation is handled by either DRAM or Optane randomly.
