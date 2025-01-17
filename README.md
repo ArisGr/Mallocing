@@ -25,7 +25,7 @@ File descriptions:
 
 - **random.c** : This file is used to perform allocations randomly. Each allocation is handled by either DRAM or Optane randomly.
 
-- **round-robin.c** : This file is used to perform allocations on a round-robin way. The allocation data are placed in round-robin way
+- **round-robin.c** : This file is used to perform allocations in a round-robin way. The allocation data are placed in round-robin way
 on each memory type.
 
 - **monitor.c** : This file is used to perform allocations on DRAM and also monitor the allocation patterns during the execution of the
