@@ -9,6 +9,7 @@ target executable, by monitoring the size and the number of active allocated obj
 
 
 ## Table of Contents
+- [File descriptions](#File descriptions)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
