@@ -9,13 +9,13 @@ target executable, by monitoring the size and the number of active allocated obj
 
 
 ## Table of Contents
-- [File descriptions](#File_descriptions)
+- [Descriptions](#Descriptions)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-## File_descriptions
+## Descriptions
 In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
 
 File descriptions:
