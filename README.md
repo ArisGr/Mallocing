@@ -1,6 +1,6 @@
 # Mallocing
 
-Mallocing is an open-source, scalable library to intercept function calls of *malloc, calloc, realloc, free* in C and *new,delete* in C++
+Mallocing is an scalable library to intercept function calls of *malloc, calloc, realloc, free* in C and *new,delete* in C++
 to place allocation objects on heterogeneous memory systems. It replaces the original functions of glibc with custom ones by using
 the respective functions of the MEMKIND API. 
 The library is compiled into a shared object (.so file) and then preloaded to the target executable using LD_PRELOAD.
