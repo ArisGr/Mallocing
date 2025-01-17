@@ -15,7 +15,7 @@ target executable, by monitoring the size and the number of active allocated obj
 - [Contributing](#contributing)
 - [License](#license)
 
-## File descriptions
+## File_descriptions
 In this repo, you will find a number of files, each one with each own functionality for placement on heterogeneous memory systems.
 
 File descriptions:
